@@ -40,7 +40,7 @@ class _WearDashboardScreenState extends State<WearDashboardScreen> {
   Widget build(BuildContext context) {
     final wearProvider = context.watch<WearProvider>();
     final habits = wearProvider.habits;
-    final isOnline = wearProvider.connectionStatus == WearConnectionStatus.connected;
+    final isOnline = wearProvider.connectionStatus == WearConnectionStatus.paired;
     final timeFormatted = DateFormat('HH:mm').format(_currentTime);
 
     return Scaffold(
