@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
@@ -10,15 +11,14 @@ import 'package:habitos_wear/screens/wear_pairing_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initializeDateFormatting('es');
+  await Firebase.initializeApp();
 
   final wearProvider = WearProvider();
   await wearProvider.init();
 
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider.value(value: wearProvider),
-      ],
+      providers: [ChangeNotifierProvider.value(value: wearProvider)],
       child: const HabitosWearApp(),
     ),
   );

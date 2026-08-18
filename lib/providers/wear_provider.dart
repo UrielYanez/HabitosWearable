@@ -16,8 +16,8 @@ class WearProvider extends ChangeNotifier {
   int get completedCount => _habits.where((h) => h.isCompleted).length;
   int get totalCount => _habits.length;
   String get userName => _userName;
-  String get pin => _clientService.pin;
-  String get host => _clientService.host;
+  String get deviceId => _clientService.deviceId;
+  String get qrData => _clientService.qrData;
   bool get isPaired => _clientService.isPaired;
   WearConnectionStatus get connectionStatus => _clientService.status;
   bool get isAmbientMode => _isAmbientMode;
@@ -37,8 +37,6 @@ class WearProvider extends ChangeNotifier {
       notifyListeners();
     };
 
-    // Iniciar conexión automática
-    _clientService.connect();
     notifyListeners();
   }
 
@@ -116,11 +114,6 @@ class WearProvider extends ChangeNotifier {
     await _clientService.unpair();
     _habits.clear();
     _completionRate = 0.0;
-    notifyListeners();
-  }
-
-  Future<void> setHost(String newHost) async {
-    await _clientService.setServerHost(newHost);
     notifyListeners();
   }
 
