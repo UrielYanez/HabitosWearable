@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "31897553362",
+    "project_id": "habitos-a100f",
+    "storage_bucket": "habitos-a100f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31897553362:android:1beaa4fc79fadd0a0e600b",
+        "android_client_info": {
+          "package_name": "com.example.habitos_wear"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiyVqQ26kD3_IfL0pHOQx8Jc0MU_MoSOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31897553362:android:ed35a7480431289a0e600b",
+        "android_client_info": {
+          "package_name": "com.r1domensai.habitos_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiyVqQ26kD3_IfL0pHOQx8Jc0MU_MoSOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31897553362:android:cf113d868513d0db0e600b",
+        "android_client_info": {
+          "package_name": "com.wearable.habitos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiyVqQ26kD3_IfL0pHOQx8Jc0MU_MoSOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
