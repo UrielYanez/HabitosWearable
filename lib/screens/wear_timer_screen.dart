@@ -70,35 +70,38 @@ class _WearTimerScreenState extends State<WearTimerScreen> {
       builder: (ctx) => Dialog(
         backgroundColor: WearTheme.surfaceElevated,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(14),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.check_circle_rounded, color: WearTheme.success, size: 36),
-              const SizedBox(height: 6),
+              const Icon(Icons.check_circle_rounded, color: WearTheme.success, size: 28),
+              const SizedBox(height: 4),
               const Text(
                 '¡Completado!',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 2),
               Text(
                 '${widget.habit.name} ($actualMinutes min)',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 10, color: WearTheme.textSecondary),
+                style: const TextStyle(fontSize: 9, color: WearTheme.textSecondary),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: WearTheme.success,
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                  minimumSize: const Size(0, 30),
                 ),
                 onPressed: () {
                   Navigator.pop(ctx); // Close dialog
                   Navigator.pop(context); // Exit timer screen
                 },
-                child: const Text('Aceptar', style: TextStyle(fontSize: 11)),
+                child: const Text('Aceptar', style: TextStyle(fontSize: 10)),
               ),
             ],
           ),
